@@ -8,36 +8,50 @@ namespace Torres_de_Hanoi
 {
     class Pila
     {
-        public int Size { get; set; }
-        /* TODO: Elegir tipo de Top
-        public int Top { get; set; }
-        public String Top { get; set; }        
-        */
-        /* TODO: Elegir tipo de Elementos
-        public Disco[] Elementos { get; set; }
-        public List<Disco> Elementos { get; set; }
-        */
+        public int Size { get; private set; }
+        public Disco Top { get; private set; }
+        public List<Disco> Elementos { get; private set; }
 
-        /* TODO: Implementar métodos */
         public Pila()
         {
-
+            Size = 0;
+            Top = null;
+            Elementos = new List<Disco>();
         }
 
         public void push(Disco d)
         {
-
+            Elementos.Add(d);
+            Top = d;
+            Size++;
         }
 
         public Disco pop()
         {
-            return null;
-        }                
+            if (isEmpty())
+            {
+                throw new InvalidOperationException("La pila está vacía");
+            }
+
+            Disco removed = Elementos[Size - 1];
+            Elementos.RemoveAt(Size - 1);
+            Size--;
+
+            if (Size > 0)
+            {
+                Top = Elementos[Size - 1];
+            }
+            else
+            {
+                Top = null;
+            }
+
+            return removed;
+        }
 
         public bool isEmpty()
         {
-            return true;
+            return Size == 0;
         }
-
     }
 }
