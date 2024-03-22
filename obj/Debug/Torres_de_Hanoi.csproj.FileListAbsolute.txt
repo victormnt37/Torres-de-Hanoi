@@ -1,0 +1,2 @@
+C:\Users\Víctor\Torres-De-Hanoi\Nueva carpeta\Torres-de-hanoi\obj\Debug\Torres_de_Hanoi.csproj.AssemblyReference.cache
+C:\Users\Víctor\Torres-De-Hanoi\Nueva carpeta\Torres-de-hanoi\obj\Debug\Torres_de_Hanoi.csproj.CoreCompileInputs.cache

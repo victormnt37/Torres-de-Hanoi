@@ -17,7 +17,7 @@ namespace Torres_de_Hanoi
             Pila aux = new Pila();
             Pila fin = new Pila();
             Hanoi hanoi = new Hanoi();
-            int movimiento = hanoi.iterativo(n, ini, aux, fin);
+            int movimiento = hanoi.Iterativo(n, ini, aux, fin);
             Console.WriteLine("Lo has completado en " + movimiento + " movimientos");
             // Keep the console window open in debug mode.
             Console.WriteLine("Press any key to exit.");

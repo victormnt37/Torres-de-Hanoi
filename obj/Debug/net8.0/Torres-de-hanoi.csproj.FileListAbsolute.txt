@@ -1,0 +1,31 @@
+C:\Users\Víctor\Torres-De-Hanoi\Nueva carpeta\Torres-de-hanoi\bin\Debug\net8.0\Torres-de-hanoi.exe
+C:\Users\Víctor\Torres-De-Hanoi\Nueva carpeta\Torres-de-hanoi\bin\Debug\net8.0\Torres-de-hanoi.deps.json
+C:\Users\Víctor\Torres-De-Hanoi\Nueva carpeta\Torres-de-hanoi\bin\Debug\net8.0\Torres-de-hanoi.runtimeconfig.json
+C:\Users\Víctor\Torres-De-Hanoi\Nueva carpeta\Torres-de-hanoi\bin\Debug\net8.0\Torres-de-hanoi.dll
+C:\Users\Víctor\Torres-De-Hanoi\Nueva carpeta\Torres-de-hanoi\bin\Debug\net8.0\Torres-de-hanoi.pdb
+C:\Users\Víctor\Torres-De-Hanoi\Nueva carpeta\Torres-de-hanoi\obj\Debug\net8.0\Torres-de-hanoi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Víctor\Torres-De-Hanoi\Nueva carpeta\Torres-de-hanoi\obj\Debug\net8.0\Torres-de-hanoi.AssemblyInfoInputs.cache
+C:\Users\Víctor\Torres-De-Hanoi\Nueva carpeta\Torres-de-hanoi\obj\Debug\net8.0\Torres-de-hanoi.AssemblyInfo.cs
+C:\Users\Víctor\Torres-De-Hanoi\Nueva carpeta\Torres-de-hanoi\obj\Debug\net8.0\Torres-de-hanoi.csproj.CoreCompileInputs.cache
+C:\Users\Víctor\Torres-De-Hanoi\Nueva carpeta\Torres-de-hanoi\obj\Debug\net8.0\Torres-de-hanoi.dll
+C:\Users\Víctor\Torres-De-Hanoi\Nueva carpeta\Torres-de-hanoi\obj\Debug\net8.0\refint\Torres-de-hanoi.dll
+C:\Users\Víctor\Torres-De-Hanoi\Nueva carpeta\Torres-de-hanoi\obj\Debug\net8.0\Torres-de-hanoi.pdb
+C:\Users\Víctor\Torres-De-Hanoi\Nueva carpeta\Torres-de-hanoi\obj\Debug\net8.0\Torres-de-hanoi.genruntimeconfig.cache
+C:\Users\Víctor\Torres-De-Hanoi\Nueva carpeta\Torres-de-hanoi\obj\Debug\net8.0\ref\Torres-de-hanoi.dll
+C:\Users\Víctor\Torres-De-Hanoi\Nueva carpeta\Torres-de-hanoi\bin\Debug\net8.0\Torres-de-hanoi.dll.config
+C:\Users\Víctor\Torres-De-Hanoi\torres-de-hanoi\Torres-de-Hanoi\bin\Debug\net8.0\Torres-de-hanoi.exe
+C:\Users\Víctor\Torres-De-Hanoi\torres-de-hanoi\Torres-de-Hanoi\bin\Debug\net8.0\Torres-de-hanoi.dll.config
+C:\Users\Víctor\Torres-De-Hanoi\torres-de-hanoi\Torres-de-Hanoi\bin\Debug\net8.0\Torres-de-hanoi.deps.json
+C:\Users\Víctor\Torres-De-Hanoi\torres-de-hanoi\Torres-de-Hanoi\bin\Debug\net8.0\Torres-de-hanoi.runtimeconfig.json
+C:\Users\Víctor\Torres-De-Hanoi\torres-de-hanoi\Torres-de-Hanoi\bin\Debug\net8.0\Torres-de-hanoi.dll
+C:\Users\Víctor\Torres-De-Hanoi\torres-de-hanoi\Torres-de-Hanoi\bin\Debug\net8.0\Torres-de-hanoi.pdb
+C:\Users\Víctor\Torres-De-Hanoi\torres-de-hanoi\Torres-de-Hanoi\obj\Debug\net8.0\Torres-de-hanoi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Víctor\Torres-De-Hanoi\torres-de-hanoi\Torres-de-Hanoi\obj\Debug\net8.0\Torres-de-hanoi.AssemblyInfoInputs.cache
+C:\Users\Víctor\Torres-De-Hanoi\torres-de-hanoi\Torres-de-Hanoi\obj\Debug\net8.0\Torres-de-hanoi.AssemblyInfo.cs
+C:\Users\Víctor\Torres-De-Hanoi\torres-de-hanoi\Torres-de-Hanoi\obj\Debug\net8.0\Torres-de-hanoi.csproj.CoreCompileInputs.cache
+C:\Users\Víctor\Torres-De-Hanoi\torres-de-hanoi\Torres-de-Hanoi\obj\Debug\net8.0\Torres-de-hanoi.sourcelink.json
+C:\Users\Víctor\Torres-De-Hanoi\torres-de-hanoi\Torres-de-Hanoi\obj\Debug\net8.0\Torres-de-hanoi.dll
+C:\Users\Víctor\Torres-De-Hanoi\torres-de-hanoi\Torres-de-Hanoi\obj\Debug\net8.0\refint\Torres-de-hanoi.dll
+C:\Users\Víctor\Torres-De-Hanoi\torres-de-hanoi\Torres-de-Hanoi\obj\Debug\net8.0\Torres-de-hanoi.pdb
+C:\Users\Víctor\Torres-De-Hanoi\torres-de-hanoi\Torres-de-Hanoi\obj\Debug\net8.0\Torres-de-hanoi.genruntimeconfig.cache
+C:\Users\Víctor\Torres-De-Hanoi\torres-de-hanoi\Torres-de-Hanoi\obj\Debug\net8.0\ref\Torres-de-hanoi.dll

@@ -32,7 +32,7 @@ namespace Torres_de_Hanoi
         }
 
 
-        public int iterativo(int n, Pila ini, Pila fin, Pila aux)
+        public int Iterativo(int n, Pila ini, Pila fin, Pila aux)
         {
             int cont = 0;
             Console.WriteLine("Situación inicial");
