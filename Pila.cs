@@ -11,9 +11,9 @@ namespace Torres_de_Hanoi
     class Pila
     {
         // Propiedades de la pila
-        public int Size { get; set; }              // Tamaño
-        public int Top { get; set; }               // Valor en la parte superior
-        public List<Disco> Elementos { get; set; } = new List<Disco>(); // Elementos
+        public int Size { get; set; }
+        public int Top { get; set; }
+        public List<Disco> Elementos { get; set; } = new List<Disco>();
 
         // Constructor de la pila que inicializa la pila con 'n' discos
         public Pila(int n)
@@ -22,35 +22,35 @@ namespace Torres_de_Hanoi
             // Agregar discos a la pila, con valores decrecientes desde 'n' hasta 1
             for (int i = n; i > 0; i--)
             {
-                Disco disco = new Disco();  // Crear un nuevo disco
-                disco.Valor = i;            // Establecer el valor del disco
-                this.Elementos.Add(disco);  // Agregar el disco a la lista de elementos de la pila
+                Disco disco = new Disco();
+                disco.Valor = i;
+                this.Elementos.Add(disco);
             }
             this.Top = this.Elementos[this.Size - 1].Valor;  // Establecer el valor en la parte superior de la pila
         }
 
         // Constructor de la pila sin parámetros, inicializa una pila vacía
         public Pila()
-        {
-            this.Size = 0;   // Tamaño de la pila igual a cero
-            this.Top = 0;    // Valor en la parte superior de la pila igual a cero
+        
+            this.Size = 0;
+            this.Top = 0;
         }
 
         // Método para insertar un disco en la parte superior de la pila
         public void push(Disco d)
         {
-            this.Size++;            // Incrementar el tamaño de la pila
-            this.Top = d.Valor;     // Actualizar el valor en la parte superior de la pila con el valor del nuevo disco
-            this.Elementos.Add(d); // Agregar el nuevo disco a la lista de elementos de la pila
+            this.Size++;            
+            this.Top = d.Valor;     
+            this.Elementos.Add(d);
         }
 
         // Método para eliminar y devolver el disco en la parte superior de la pila
         public Disco pop()
         {
-            Disco disco = new Disco();  // Crear un nuevo objeto de tipo Disco
+            Disco disco = new Disco();
             disco = this.Elementos[this.Size - 1];  // Obtener el disco en la parte superior de la pila
             this.Elementos.Remove(disco);   // Eliminar el disco de la lista de elementos de la pila
-            this.Size--;    // Decrementar el tamaño de la pila
+            this.Size--;
             // Actualizar el valor en la parte superior de la pila, si la pila no está vacía
             if (this.Size > 0)
                 this.Top = this.Elementos[this.Size - 1].Valor;
@@ -60,7 +60,6 @@ namespace Torres_de_Hanoi
         // Método para verificar si la pila está vacía
         public bool isEmpty()
         {
-            // Devolver verdadero si el tamaño de la pila es cero, de lo contrario, devolver falso
             if (this.Size == 0)
             {
                 return true;

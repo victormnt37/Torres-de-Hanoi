@@ -19,7 +19,6 @@ namespace Torres_de_Hanoi
                 Console.WriteLine("Has seleccionado " + n + " discos. Este valor no es válido, prueba con otro.");
                 n = Int32.Parse(Console.ReadLine());
             }
-            // Se muestra cuántos discos se han seleccionado
             Console.WriteLine("Has seleccionado " + n + " discos");
 
             // Inicializamos tres pilas para las torres de Hanoi
@@ -32,7 +31,6 @@ namespace Torres_de_Hanoi
 
             // Se ejecuta el algoritmo de resolución de Hanoi y se obtiene el número de movimientos
             int movimiento = hanoi.iterativo(n, ini, aux, fin);
-            // Se muestra el número total de movimientos requeridos para resolver el rompecabezas
             Console.WriteLine("Lo has completado en " + movimiento + " movimientos");
             // Mantener abierta la ventana de la consola en modo de depuración
             Console.WriteLine("Press any key to exit.");

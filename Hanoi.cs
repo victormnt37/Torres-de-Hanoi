@@ -41,7 +41,6 @@ namespace Torres_de_Hanoi
         {
             int cont = 0; // Contador de movimientos
             Console.WriteLine("Situación inicial");
-            // Mostrar la situación inicial de las torres
             Console.Write("Torre INI: ");
             for (int i = 0; i < ini.Size; i++)
             {
@@ -68,7 +67,6 @@ namespace Torres_de_Hanoi
                     // Movimiento de 'ini' a 'fin'
                     mover_disco(ini, fin);
                     cont++;
-                    // Mostrar la situación después del movimiento
                     Console.WriteLine("Situación tras movimiento " + cont);
                     Console.Write("Torre INI: ");
                     for (int i = 0; i < ini.Size; i++)
@@ -97,7 +95,6 @@ namespace Torres_de_Hanoi
                     // Movimiento de 'ini' a 'aux'
                     mover_disco(ini, aux);
                     cont++;
-                    // Mostrar la situación después del movimiento
                     Console.WriteLine("Situación tras movimiento " + cont);
                     Console.Write("Torre INI: ");
                     for (int i = 0; i < ini.Size; i++)
@@ -126,7 +123,6 @@ namespace Torres_de_Hanoi
                     // Movimiento de 'aux' a 'fin'
                     mover_disco(aux, fin);
                     cont++;
-                    // Mostrar la situación después del movimiento
                     Console.WriteLine("Situación tras movimiento " + cont);
                     Console.Write("Torre INI: ");
                     for (int i = 0; i < ini.Size; i++)
@@ -155,10 +151,12 @@ namespace Torres_de_Hanoi
             }
             if (n % 2 == 0)
             {
+                // Algoritmo para el caso cuando 'n' es par
                 while (fin.Size != n)
                 {
+                    // Mover disco de 'ini' a 'aux'
                     mover_disco(ini, aux);
-                    cont++;
+                    cont++; // Incrementar contador de movimientos
                     Console.WriteLine("Situación tras movimiento " + cont);
                     Console.Write("Torre INI: ");
                     for (int i = 0; i < ini.Size; i++)
@@ -178,12 +176,15 @@ namespace Torres_de_Hanoi
                         Console.Write(fin.Elementos[i].Valor);
                     }
                     Console.WriteLine();
+                    // Verificar si se alcanzó la situación final
                     if (fin.Size == n)
                     {
-                        return cont;
+                        return cont; // Devolver el número de movimientos realizados
                     }
+                    
+                    // Mover disco de 'ini' a 'fin'
                     mover_disco(ini, fin);
-                    cont++;
+                    cont++; // Incrementar contador de movimientos
                     Console.WriteLine("Situación tras movimiento " + cont);
                     Console.Write("Torre INI: ");
                     for (int i = 0; i < ini.Size; i++)
@@ -203,12 +204,15 @@ namespace Torres_de_Hanoi
                         Console.Write(fin.Elementos[i].Valor);
                     }
                     Console.WriteLine();
+                    // Verificar si se alcanzó la situación final
                     if (fin.Size == n)
                     {
-                        return cont;
+                        return cont; 
                     }
+                    
+                    // Mover disco de 'aux' a 'fin'
                     mover_disco(aux, fin);
-                    cont++;
+                    cont++; // Incrementar contador de movimientos
                     Console.WriteLine("Situación tras movimiento " + cont);
                     Console.Write("Torre INI: ");
                     for (int i = 0; i < ini.Size; i++)
@@ -228,6 +232,7 @@ namespace Torres_de_Hanoi
                         Console.Write(fin.Elementos[i].Valor);
                     }
                     Console.WriteLine();
+                    // Verificar si se alcanzó la situación final
                     if (fin.Size == n)
                     {
                         return cont;
@@ -235,7 +240,8 @@ namespace Torres_de_Hanoi
                 }
             }
 
-            return cont;
+            return cont; 
+
         }
 
     }
