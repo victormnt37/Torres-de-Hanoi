@@ -13,7 +13,7 @@ namespace Torres_de_Hanoi
         // Propiedades de la pila
         public int Size { get; set; }              // Tamaño
         public int Top { get; set; }               // Valor en la parte superior
-        public List<Disco> Elementos { get; set; } // Elementos
+        public List<Disco> Elementos { get; set; } = new List<Disco>(); // Elementos
 
         // Constructor de la pila que inicializa la pila con 'n' discos
         public Pila(int n)
@@ -54,7 +54,7 @@ namespace Torres_de_Hanoi
             // Actualizar el valor en la parte superior de la pila, si la pila no está vacía
             if (this.Size > 0)
                 this.Top = this.Elementos[this.Size - 1].Valor;
-            return disco;   
+            return disco;
         }
 
         // Método para verificar si la pila está vacía

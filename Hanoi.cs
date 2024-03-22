@@ -9,7 +9,7 @@ namespace Torres_de_Hanoi
     class Hanoi
     {
         // Método para mover un disco de una pila a otra
-        public void MoverDisco(Pila a, Pila b)
+        public void mover_disco(Pila a, Pila b)
         {
             // Verificar si la pila destino está vacía
             if (b.isEmpty())
@@ -37,7 +37,7 @@ namespace Torres_de_Hanoi
         }
 
         // Método para resolver el problema de las Torres de Hanoi de forma iterativa
-        public int Iterativo(int n, Pila ini, Pila fin, Pila aux)
+        public int iterativo(int n, Pila ini, Pila fin, Pila aux)
         {
             int cont = 0; // Contador de movimientos
             Console.WriteLine("Situación inicial");
@@ -66,7 +66,7 @@ namespace Torres_de_Hanoi
                 while (fin.Size != n)
                 {
                     // Movimiento de 'ini' a 'fin'
-                    MoverDisco(ini, fin);
+                    mover_disco(ini, fin);
                     cont++;
                     // Mostrar la situación después del movimiento
                     Console.WriteLine("Situación tras movimiento " + cont);
@@ -95,7 +95,7 @@ namespace Torres_de_Hanoi
                     }
 
                     // Movimiento de 'ini' a 'aux'
-                    MoverDisco(ini, aux);
+                    mover_disco(ini, aux);
                     cont++;
                     // Mostrar la situación después del movimiento
                     Console.WriteLine("Situación tras movimiento " + cont);
@@ -124,7 +124,7 @@ namespace Torres_de_Hanoi
                     }
 
                     // Movimiento de 'aux' a 'fin'
-                    MoverDisco(aux, fin);
+                    mover_disco(aux, fin);
                     cont++;
                     // Mostrar la situación después del movimiento
                     Console.WriteLine("Situación tras movimiento " + cont);

@@ -23,15 +23,15 @@ namespace Torres_de_Hanoi
             Console.WriteLine("Has seleccionado " + n + " discos");
 
             // Inicializamos tres pilas para las torres de Hanoi
-            Pila ini = new Pila(n); 
-            Pila aux = new Pila();  
-            Pila fin = new Pila();   
+            Pila ini = new Pila(n);
+            Pila aux = new Pila();
+            Pila fin = new Pila();
 
             // creamos una instancia de la clase Hanoi
             Hanoi hanoi = new Hanoi();
 
             // Se ejecuta el algoritmo de resolución de Hanoi y se obtiene el número de movimientos
-            int movimiento = hanoi.Iterativo(n, ini, aux, fin);
+            int movimiento = hanoi.iterativo(n, ini, aux, fin);
             // Se muestra el número total de movimientos requeridos para resolver el rompecabezas
             Console.WriteLine("Lo has completado en " + movimiento + " movimientos");
             // Mantener abierta la ventana de la consola en modo de depuración
