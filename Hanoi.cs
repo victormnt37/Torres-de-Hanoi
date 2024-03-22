@@ -155,10 +155,87 @@ namespace Torres_de_Hanoi
             }
             if (n % 2 == 0)
             {
-                // Algoritmo similar para cuando 'n' es par
+                while (fin.Size != n)
+                {
+                    mover_disco(ini, aux);
+                    cont++;
+                    Console.WriteLine("Situación tras movimiento " + cont);
+                    Console.Write("Torre INI: ");
+                    for (int i = 0; i < ini.Size; i++)
+                    {
+                        Console.Write(ini.Elementos[i].Valor);
+                    }
+                    Console.WriteLine();
+                    Console.Write("Torre AUX: ");
+                    for (int i = 0; i < aux.Size; i++)
+                    {
+                        Console.Write(aux.Elementos[i].Valor);
+                    }
+                    Console.WriteLine();
+                    Console.Write("Torre FIN: ");
+                    for (int i = 0; i < fin.Size; i++)
+                    {
+                        Console.Write(fin.Elementos[i].Valor);
+                    }
+                    Console.WriteLine();
+                    if (fin.Size == n)
+                    {
+                        return cont;
+                    }
+                    mover_disco(ini, fin);
+                    cont++;
+                    Console.WriteLine("Situación tras movimiento " + cont);
+                    Console.Write("Torre INI: ");
+                    for (int i = 0; i < ini.Size; i++)
+                    {
+                        Console.Write(ini.Elementos[i].Valor);
+                    }
+                    Console.WriteLine();
+                    Console.Write("Torre AUX: ");
+                    for (int i = 0; i < aux.Size; i++)
+                    {
+                        Console.Write(aux.Elementos[i].Valor);
+                    }
+                    Console.WriteLine();
+                    Console.Write("Torre FIN: ");
+                    for (int i = 0; i < fin.Size; i++)
+                    {
+                        Console.Write(fin.Elementos[i].Valor);
+                    }
+                    Console.WriteLine();
+                    if (fin.Size == n)
+                    {
+                        return cont;
+                    }
+                    mover_disco(aux, fin);
+                    cont++;
+                    Console.WriteLine("Situación tras movimiento " + cont);
+                    Console.Write("Torre INI: ");
+                    for (int i = 0; i < ini.Size; i++)
+                    {
+                        Console.Write(ini.Elementos[i].Valor);
+                    }
+                    Console.WriteLine();
+                    Console.Write("Torre AUX: ");
+                    for (int i = 0; i < aux.Size; i++)
+                    {
+                        Console.Write(aux.Elementos[i].Valor);
+                    }
+                    Console.WriteLine();
+                    Console.Write("Torre FIN: ");
+                    for (int i = 0; i < fin.Size; i++)
+                    {
+                        Console.Write(fin.Elementos[i].Valor);
+                    }
+                    Console.WriteLine();
+                    if (fin.Size == n)
+                    {
+                        return cont;
+                    }
+                }
             }
 
-            return cont; // Devolver el número total de movimientos realizados
+            return cont;
         }
 
     }
