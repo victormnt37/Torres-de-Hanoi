@@ -1,6 +1,8 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,50 +10,55 @@ namespace Torres_de_Hanoi
 {
     class Pila
     {
-        public int Size { get; private set; }
-        public Disco Top { get; private set; }
-        public List<Disco> Elementos { get; private set; }
+        public int Size { get; set; }
+        public int Top { get; set; }
+        public List<Disco> Elementos { get; set; } = new List<Disco>();
+
+
+        public Pila(int n)
+        {
+            this.Size = n;
+            for (int i = n; i > 0; i--)
+            {
+                Disco disco = new Disco();
+                disco.Valor = i;
+                this.Elementos.Add(disco);
+            }
+            this.Top = this.Elementos[this.Size - 1].Valor;
+        }
 
         public Pila()
         {
-            Size = 0;
-            Top = null;
-            Elementos = new List<Disco>();
+            this.Size = 0;
+            this.Top = 0;
         }
 
         public void push(Disco d)
         {
-            Elementos.Add(d);
-            Top = d;
-            Size++;
+            this.Size++;
+            this.Top = d.Valor;
+            this.Elementos.Add(d);
         }
-
         public Disco pop()
         {
-            if (isEmpty())
+            Disco disco = new Disco();
+            disco = this.Elementos[this.Size - 1];
+            this.Elementos.Remove(disco);
+            this.Size--;
+            if (this.Size > 0)
+                this.Top = this.Elementos[this.Size - 1].Valor;
+            return disco;
+        }
+        public bool isEmpty()
+        {
+            if (this.Size == 0)
             {
-                throw new InvalidOperationException("La pila está vacía");
-            }
-
-            Disco removed = Elementos[Size - 1];
-            Elementos.RemoveAt(Size - 1);
-            Size--;
-
-            if (Size > 0)
-            {
-                Top = Elementos[Size - 1];
+                return true;
             }
             else
             {
-                Top = null;
+                return false;
             }
-
-            return removed;
-        }
-
-        public bool isEmpty()
-        {
-            return Size == 0;
         }
     }
 }

@@ -6,86 +6,221 @@ using System.Threading.Tasks;
 
 namespace Torres_de_Hanoi
 {
-
-    public class Hanoi
+    class Hanoi
     {
-        // Método para mover un disco entre dos pilas
-        public static void MoverDisco(Pila a, Pila b)
+        public void MoverDisco(Pila a, Pila b)
         {
-            if (a.EstaVacia() && b.EstaVacia())
-            {
-                Console.WriteLine("No hay discos para mover.");
-                return;
-            }
 
-            Disco discoA = a.VerTope();
-            Disco discoB = b.VerTope();
-
-            if (a.EstaVacia() || (discoB != null && discoA.Tamaño > discoB.Tamaño))
+            if (b.isEmpty())
             {
-                // Mover disco de b a a
-                Disco discoMovido = b.ExtraerDisco();
-                a.AgregarDisco(discoMovido);
-                Console.WriteLine($"Mover disco de tamaño {discoMovido.Tamaño} de {b.Nombre} a {a.Nombre}");
+                Disco disco = a.pop();
+                b.push(disco);
             }
             else
             {
-                // Mover disco de a a b
-                Disco discoMovido = a.ExtraerDisco();
-                b.AgregarDisco(discoMovido);
-                Console.WriteLine($"Mover disco de tamaño {discoMovido.Tamaño} de {a.Nombre} a {b.Nombre}");
+                if (b.Top > a.Top && !a.isEmpty())
+                {
+                    Disco disco = a.pop();
+                    b.push(disco);
+                }
+                else
+                {
+                    Disco disco1 = b.pop();
+                    a.push(disco1);
+                }
             }
         }
 
-        // Método para resolver las Torres de Hanoi
-        public static int ResolverHanoi(int n, Pila ini, Pila fin, Pila aux)
+
+        public int iterativo(int n, Pila ini, Pila fin, Pila aux)
         {
-            int movimientos = 0;
-
-            if (n % 2 == 1)
+            int cont = 0;
+            Console.WriteLine("Situación inicial");
+            Console.Write("Torre INI: ");
+            for (int i = 0; i < ini.Size; i++)
             {
-                // Número impar de discos
-                while (fin.ContarDiscos() != n)
-                {
-                    MoverDisco(ini, aux);
-                    movimientos++;
-
-                    if (fin.ContarDiscos() == n)
-                        break;
-
-                    MoverDisco(ini, fin);
-                    movimientos++;
-
-                    if (fin.ContarDiscos() == n)
-                        break;
-
-                    MoverDisco(aux, fin);
-                    movimientos++;
-                }
+                Console.Write(ini.Elementos[i].Valor);
             }
-            else
+            Console.WriteLine();
+            Console.Write("Torre AUX: ");
+            for (int i = 0; i < aux.Size; i++)
             {
-                // Número par de discos
-                while (fin.ContarDiscos() != n)
+                Console.Write(aux.Elementos[i].Valor);
+            }
+            Console.WriteLine();
+            Console.Write("Torre FIN: ");
+            for (int i = 0; i < fin.Size; i++)
+            {
+                Console.Write(fin.Elementos[i].Valor);
+            }
+            Console.WriteLine();
+            if (n % 2 != 0)
+            {
+                while (fin.Size != n)
                 {
                     MoverDisco(ini, fin);
-                    movimientos++;
-
-                    if (fin.ContarDiscos() == n)
-                        break;
+                    cont++;
+                    Console.WriteLine("Situación tras movimiento " + cont);
+                    Console.Write("Torre INI: ");
+                    for (int i = 0; i < ini.Size; i++)
+                    {
+                        Console.Write(ini.Elementos[i].Valor);
+                    }
+                    Console.WriteLine();
+                    Console.Write("Torre AUX: ");
+                    for (int i = 0; i < aux.Size; i++)
+                    {
+                        Console.Write(aux.Elementos[i].Valor);
+                    }
+                    Console.WriteLine();
+                    Console.Write("Torre FIN: ");
+                    for (int i = 0; i < fin.Size; i++)
+                    {
+                        Console.Write(fin.Elementos[i].Valor);
+                    }
+                    Console.WriteLine();
+                    if (fin.Size == n)
+                    {
+                        return cont;
+                    }
 
                     MoverDisco(ini, aux);
-                    movimientos++;
-
-                    if (fin.ContarDiscos() == n)
-                        break;
+                    cont++;
+                    Console.WriteLine("Situación tras movimiento " + cont);
+                    Console.Write("Torre INI: ");
+                    for (int i = 0; i < ini.Size; i++)
+                    {
+                        Console.Write(ini.Elementos[i].Valor);
+                    }
+                    Console.WriteLine();
+                    Console.Write("Torre AUX: ");
+                    for (int i = 0; i < aux.Size; i++)
+                    {
+                        Console.Write(aux.Elementos[i].Valor);
+                    }
+                    Console.WriteLine();
+                    Console.Write("Torre FIN: ");
+                    for (int i = 0; i < fin.Size; i++)
+                    {
+                        Console.Write(fin.Elementos[i].Valor);
+                    }
+                    Console.WriteLine();
+                    if (fin.Size == n)
+                    {
+                        return cont;
+                    }
 
                     MoverDisco(aux, fin);
-                    movimientos++;
+                    cont++;
+                    Console.WriteLine("Situación tras movimiento " + cont);
+                    Console.Write("Torre INI: ");
+                    for (int i = 0; i < ini.Size; i++)
+                    {
+                        Console.Write(ini.Elementos[i].Valor);
+                    }
+                    Console.WriteLine();
+                    Console.Write("Torre AUX: ");
+                    for (int i = 0; i < aux.Size; i++)
+                    {
+                        Console.Write(aux.Elementos[i].Valor);
+                    }
+                    Console.WriteLine();
+                    Console.Write("Torre FIN: ");
+                    for (int i = 0; i < fin.Size; i++)
+                    {
+                        Console.Write(fin.Elementos[i].Valor);
+                    }
+                    Console.WriteLine();
+                    if (fin.Size == n)
+                    {
+                        return cont;
+                    }
+                }
+            }
+            if (n % 2 == 0)
+            {
+                while (fin.Size != n)
+                {
+                    MoverDisco(ini, aux);
+                    cont++;
+                    Console.WriteLine("Situación tras movimiento " + cont);
+                    Console.Write("Torre INI: ");
+                    for (int i = 0; i < ini.Size; i++)
+                    {
+                        Console.Write(ini.Elementos[i].Valor);
+                    }
+                    Console.WriteLine();
+                    Console.Write("Torre AUX: ");
+                    for (int i = 0; i < aux.Size; i++)
+                    {
+                        Console.Write(aux.Elementos[i].Valor);
+                    }
+                    Console.WriteLine();
+                    Console.Write("Torre FIN: ");
+                    for (int i = 0; i < fin.Size; i++)
+                    {
+                        Console.Write(fin.Elementos[i].Valor);
+                    }
+                    Console.WriteLine();
+                    if (fin.Size == n)
+                    {
+                        return cont;
+                    }
+                    MoverDisco(ini, fin);
+                    cont++;
+                    Console.WriteLine("Situación tras movimiento " + cont);
+                    Console.Write("Torre INI: ");
+                    for (int i = 0; i < ini.Size; i++)
+                    {
+                        Console.Write(ini.Elementos[i].Valor);
+                    }
+                    Console.WriteLine();
+                    Console.Write("Torre AUX: ");
+                    for (int i = 0; i < aux.Size; i++)
+                    {
+                        Console.Write(aux.Elementos[i].Valor);
+                    }
+                    Console.WriteLine();
+                    Console.Write("Torre FIN: ");
+                    for (int i = 0; i < fin.Size; i++)
+                    {
+                        Console.Write(fin.Elementos[i].Valor);
+                    }
+                    Console.WriteLine();
+                    if (fin.Size == n)
+                    {
+                        return cont;
+                    }
+                    MoverDisco(aux, fin);
+                    cont++;
+                    Console.WriteLine("Situación tras movimiento " + cont);
+                    Console.Write("Torre INI: ");
+                    for (int i = 0; i < ini.Size; i++)
+                    {
+                        Console.Write(ini.Elementos[i].Valor);
+                    }
+                    Console.WriteLine();
+                    Console.Write("Torre AUX: ");
+                    for (int i = 0; i < aux.Size; i++)
+                    {
+                        Console.Write(aux.Elementos[i].Valor);
+                    }
+                    Console.WriteLine();
+                    Console.Write("Torre FIN: ");
+                    for (int i = 0; i < fin.Size; i++)
+                    {
+                        Console.Write(fin.Elementos[i].Valor);
+                    }
+                    Console.WriteLine();
+                    if (fin.Size == n)
+                    {
+                        return cont;
+                    }
                 }
             }
 
-            return movimientos;
+            return cont;
         }
+
     }
 }
