@@ -34,7 +34,7 @@ namespace Torres_de_Hanoi
             int movimiento = hanoi.Iterativo(n, ini, aux, fin);
             // Se muestra el número total de movimientos requeridos para resolver el rompecabezas
             Console.WriteLine("Lo has completado en " + movimiento + " movimientos");
-
+            // Mantener abierta la ventana de la consola en modo de depuración
             Console.WriteLine("Press any key to exit.");
             Console.ReadKey();
         }
