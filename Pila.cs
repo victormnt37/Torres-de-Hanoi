@@ -31,7 +31,7 @@ namespace Torres_de_Hanoi
 
         // Constructor de la pila sin parámetros, inicializa una pila vacía
         public Pila()
-        
+        {
             this.Size = 0;
             this.Top = 0;
         }
@@ -39,8 +39,8 @@ namespace Torres_de_Hanoi
         // Método para insertar un disco en la parte superior de la pila
         public void push(Disco d)
         {
-            this.Size++;            
-            this.Top = d.Valor;     
+            this.Size++;
+            this.Top = d.Valor;
             this.Elementos.Add(d);
         }
 

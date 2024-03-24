@@ -59,7 +59,8 @@ namespace Torres_de_Hanoi
                 Console.Write(fin.Elementos[i].Valor);
             }
             Console.WriteLine();
-            // Algoritmo iterativo para resolver el problema de las Torres de Hanoi
+            // Algoritmo iterativo
+            // Para números pares
             if (n % 2 != 0)
             {
                 while (fin.Size != n)
@@ -149,7 +150,8 @@ namespace Torres_de_Hanoi
                     }
                 }
             }
-            if (n % 2 == 0)
+            // Para números impares
+            else if (n % 2 == 0)
             {
                 // Algoritmo para el caso cuando 'n' es par
                 while (fin.Size != n)
@@ -181,7 +183,7 @@ namespace Torres_de_Hanoi
                     {
                         return cont; // Devolver el número de movimientos realizados
                     }
-                    
+
                     // Mover disco de 'ini' a 'fin'
                     mover_disco(ini, fin);
                     cont++; // Incrementar contador de movimientos
@@ -207,9 +209,9 @@ namespace Torres_de_Hanoi
                     // Verificar si se alcanzó la situación final
                     if (fin.Size == n)
                     {
-                        return cont; 
+                        return cont;
                     }
-                    
+
                     // Mover disco de 'aux' a 'fin'
                     mover_disco(aux, fin);
                     cont++; // Incrementar contador de movimientos
@@ -240,7 +242,7 @@ namespace Torres_de_Hanoi
                 }
             }
 
-            return cont; 
+            return cont;
 
         }
 
