@@ -10,15 +10,29 @@ namespace Torres_de_Hanoi
     {
         static void Main(string[] args)
         {
-            // Se solicita al usuario el número de discos que desea usar
-            Console.WriteLine("Dime el número de discos: ");
-            int n = Int32.Parse(Console.ReadLine());
-            while (n < 1)
+            int n;
+            bool esNumero;
+
+            do
             {
+                // Se solicita al usuario el número de discos que desea usar
+                Console.WriteLine("Indica el número de discos: ");
+
+                string input = Console.ReadLine();
+
+                esNumero = Int32.TryParse(input, out n); // Comprueba si el valor es un int
+
                 // Comprobar que el numero de discos es válido
-                Console.WriteLine("Has seleccionado " + n + " discos. Este valor no es válido, prueba con otro.");
-                n = Int32.Parse(Console.ReadLine());
-            }
+                if (!esNumero)
+                {
+                    Console.WriteLine("Entrada inválida. Por favor, ingrese un número válido.");
+                }
+                else if (n < 1)
+                {
+                    Console.WriteLine("El número debe ser mayor o igual a 1.");
+                }
+            } while (!esNumero || n < 1);
+
             Console.WriteLine("Has seleccionado " + n + " discos");
 
             // Inicializamos tres pilas para las torres de Hanoi
@@ -31,7 +45,7 @@ namespace Torres_de_Hanoi
 
             // Se ejecuta el algoritmo de resolución de Hanoi y se obtiene el número de movimientos
             int movimiento = hanoi.iterativo(n, ini, aux, fin);
-            Console.WriteLine("Lo has completado en " + movimiento + " movimientos");
+            Console.WriteLine("Resuelto en " + movimiento + " movimientos");
             // Mantener abierta la ventana de la consola en modo de depuración
             Console.WriteLine("Press any key to exit.");
             Console.ReadKey();
