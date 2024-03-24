@@ -44,6 +44,7 @@ namespace Torres_de_Hanoi
             Console.Write("Torre INI: ");
             for (int i = 0; i < ini.Size; i++)
             {
+                // Mostrar los discos en la pila INI
                 Console.Write(ini.Elementos[i].Valor);
             }
             Console.WriteLine();
